@@ -1,19 +1,18 @@
 <template>
-  <h1>Events For Good</h1>
+  <h1>Information</h1>
   <div class="events">
-    <EventCard v-for="event in events" :key="event.id" :event="event"/>
+    <NewEvent v-for="event in events" :key="event.id" :event="event"/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import EventCard from "@/components/EventCard.vue"
-
+import NewEvent from "@/components/NewEvent.vue"
 
 export default {
-  name: "EventList",
+  name: "Info",
   components: {
-    EventCard, // register it as a child component
+    NewEvent, // register it as a child component
   },
   data(){
     return{
